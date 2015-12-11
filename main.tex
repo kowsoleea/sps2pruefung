@@ -48,7 +48,7 @@
 % arg3: label (for \autoref{} )
 % arg4: width in cm
 \newcommand{\image}[4]{
-	\begin{figure}[ht]
+	\begin{figure}[!ht]
 		\centering
 		\includegraphics[width=#4cm]{#1}
 		\caption{#2}
@@ -96,36 +96,42 @@ Seit einigen Jahren müssen in Bayern diejenigen, die an einer Fachakademie für
 Sozialpädagogik das 
 einjährige Sozialpädagogische Seminar (SPS) absolvieren 
 (die sogenannte Quereinsteiger) und keine abgeschlossene Berufsausbildung
-aufweisen, eine Prüfung zur KinderpflegerIn ablegen.%
+aufweisen, eine (externe) Prüfung zur KinderpflegerIn ablegen.%
 \footnote{Siehe FakOSozPäd Anlage 3, Ziffer 10.1.2, Satz 2}
 
 %: Erzieherpraktikanten, die unmittelbar in das zweite Jahr des Sozialpädagogischen Seminars eintreten und keine abgeschlossene Berufsausbildung in einem staatlich anerkannten Ausbildungsberuf aufweisen, haben sich einer Abschlussprüfung als andere Bewerber zum Erwerb des Berufsabschlusses als Staatlich geprüfter Kinderpfleger/ Staatlich geprüfte Kinderpflegerin an der Fachakademie für Sozialpädagogik zu unterziehen}
 
 Da diese PraktikantInnen nur 0,5 Jahreswochenstunden Musikunterricht haben,
-gibt es wenig Unterrichtszeit in der die KanditadInnen auf die
-Prüfung vorbereitet werden können. Dieses Skript möchte den theoretischen Prüfungsstoff im 
-Fach Musik präsentieren, damit ebendiese Quereinsteiger sich zum Teil selbstständig 
+gibt es wenig Unterrichtszeit in der die KandidatInnen auf die
+Prüfung vorbereitet werden können. Ich möchte hier die
+nötigen musiktheoretischen Grundlagen darstellen
+damit ebendiese Quereinsteiger 
+sich selbstständig 
 auf die Musikprüfung vorbereiten können.
 
 \section{Zur Prüfung}
-Während der Prüfung in das Fach Musik muss man nachweisen, dass man in der Lage ist,
+Während der Prüfung in das Fach Musik muss man nachweisen, 
+dass man in der Lage ist,
 sich ein Kinderlied anzueignen, 
-dieses zum Klingen zu bringen (sowohl singend als spielend), zu begleiten und mit 
+dieses zum Klingen zu bringen (sowohl singend als spielend), 
+zu begleiten und mit 
 Kindern zu singen oder musizieren. Dazu sollen
 Sprache (der Liedtext) und Bewegung (Tanz, Spiele) sinnvoll eingesetzt werden.
 
-Damit der/die KandidatIn sich ein neues Lied aneignen kann, wird in diesem Skript zuerst das 
-Notenlesen behandelt. Danach wird auf 
-einfache Begleitungsarten eingegangen. Die Instrumentenkunde umfasst das kleine
-Schlagwerk. Abschließend gibt es noch einige Tipps für das Musizieren
-mit Kindern in Kindergartenalter.
+Damit der/die KandidatIn sich ein neues Lied aneignen kann, 
+wird in diesem Skript zuerst das 
+Notenlesen behandelt. Versetzungszeichen und Tonarten werden in aller Kürze 
+behandelt um dem/der KandidatIn den Zugang zu Liedern in anderen Tonarten
+als C-Dur zu ermöglichen. Auch wird kurz auf 
+einfache Begleitungsarten eingegangen. 
 
 %
 % Kapitel: Tonsystem
 %
 \chapter{Tonsystem}
 \section{Die Stammtöne}
-In unserem Tonsystem gibt es sieben Töne. Von diesen sieben Töne, die auch Stamm\-tö\-ne 
+In unserem Tonsystem gibt es sieben Töne. Von diesen sieben Tönen,
+ die auch Stamm\-tö\-ne 
 \comment{Stammtöne}
 genannt werden, 
 leitet man noch fünf andere Töne ab. Insgesamt besteht unser Tonsystem aus 
@@ -133,24 +139,27 @@ zwölf verschiedenen Tönen.
 
 Die Stammtöne sind: \emph{c, d, e, f, g, a, h.} Siehe auch \autoref{stammtoene}
 Diese Töne kann man beliebig -- höher oder tiefer -- wiederholen. Nach dem 
-\emph{h} kommt noch einmal
+\emph{h} kommt wieder
 \emph{c, d, e\dots} und vor dem c findet man \emph{\dots g, a, h.}
+
+\image{lilypond/stammtoene.png}{Die Stammtöne in Notenschrift}{stammtoene}{6}
+
 
 Wenn man die Töne von einem \emph{c} zum nächsten \emph{c} zählt 
 (wobei man beide \emph{c's} mit zählt),
-findet man acht Töne. Dieser Abstand \emph{c --- c} nennt man 
+kommt man auf acht Töne. Dieser Abstand \emph{c --- c} nennt man 
 \emph{Oktave}\footnote{von dem lateinischen \glqq 
 	octavus\grqq -- der achte}.
 \comment{Oktave}
 
-Es gibt folglich mehrere \emph{c's} oder \emph{g's}. 
+Es gibt folglich mehrere \emph{c's}. 
 Um anzudeuten welches \emph{c} man meint, muss man  
 zusätzlich angeben in welcher Oktave sich der Ton 
 befindet. Die Stammtöne in \autoref{stammtoene} gehören
-zu der \emph{eingestrichene Oktave} --- man sagt: 
+zu der \emph{eingestrichenen Oktave} --- man sagt: 
 \emph{c-eins, d-eins \dots} --- man schreibt
  $c^{1}, d^{1}, \dots$
-\image{lilypond/stammtoene.png}{Die Stammtöne in Notenschrift}{stammtoene}{6}
+ 
 
 Die nächsthöhere Oktave ist die \emph{zweigestrichene} Oktave: 
 \emph{$c^{2}, d^{2}, \dots $}. Danach folgt die dreigestrichene Oktave
@@ -162,23 +171,21 @@ heißt \emph{große} Oktave (\emph{C, D, \dots}). Danach folgen die
 (\emph{$C_{2}, D_{2}, \dots$}). Eine noch tiefere Oktave gibt es 
 nicht, weil deren Töne so tief wären, dass man sie nicht mehr hören könnte.
 
-\image{lilypond/oktaven.png}{ein Teil der kleinen Oktave, ein- und zweigestrichenen Oktave}{oktaven}{13}
+\image{lilypond/oktaven.png}{ein Teil der kleinen Oktave,
+    ein- und zweigestrichenen Oktave}{oktaven}{13}
 
-Stimmen von Kindern im Kindergartenalter %
-\footnote{vgl. Ernst, Manfred: 
-Praxis Singen mit Kindern, S. 13}
+Stimmen von Kindern im Kindergartenalter\footnote{vgl. Ernst, 2008 S. 13}
 \comment{Umfang d. Kinderstimme}
 bewegen sich in der Regel von 
 $f^1$~bis~$d^2.$ 
 Männer singen meistens in der \emph{kleinen Oktave}, Frauen in der Regel in
 der \emph{eingestrichenen Oktave.}
-%
-%
-%
+
+
 \section{Versetzungszeichen}
 Die Abstände zwischen den sieben Stammtönen sind nicht alle gleich. 
 Meistens befindet sich zwischen
-zwei Tönen ein Ganztonschritt. Jedoch zwischen dem \emph{e} und 
+zwei Tönen ein \emph{Ganztonschritt}. Jedoch zwischen dem \emph{e} und 
 \emph{f} und zwischen dem \emph{h} und
 \emph{c} befindet sich ein Halbtonschritt. Die Abstände sind wie folgt:
 \begin{center}
@@ -207,13 +214,15 @@ einen Ton um einen Halbtonschritt
 höher oder Tiefer zu versetzen. Dazu schreibt man ein Versetzungszeichen 
 (ein \emph{Kreuz} oder ein \emph{b}) vor einer Note.
 \comment{Kreuz: $\sharp$\\b: $\flat$}
-Ein \emph{Kreuz} macht eine Note um einen Halbtonschritt höher. Ein \emph{b} macht eine 
-Note um einen Halbtonschritt tiefer. Ein Kreuz sieht so aus: $\sharp$, und ein b: $\flat$.
+Ein \emph{Kreuz} macht eine Note um einen Halbtonschritt höher. 
+Ein \emph{b} macht eine 
+Note um einen Halbtonschritt tiefer. Ein Kreuz sieht so 
+aus: $\sharp$, und ein b: $\flat$.
 
 Um eine Versetzung auszudrucken ändert man den Namen des Tons. 
 Eine Erhöhung deutet man an mit der
 Silbe -is, die man den Notennamen anhängt. 
-Ein \glqq tiefergelegten\grqq\  Ton bekommt die Silbe 
+Ein "`tiefergelegter"' Ton bekommt die Silbe 
 -es angehängt. Es gibt einige Ausnahmen. Siehe dazu die 
 fettgedruckten Einträge in der \autoref{notennamen}.
 \begin{table}[ht]
@@ -245,12 +254,13 @@ Beachte den Notennamen in der letzten Zeile, in der linke Spalte.
 Diese Note \emph{(b)} hätte eigentlich \emph{hes} heißen müssen.
 \comment{hes $\rightarrow$ b}
 Es ist jedoch eine Ausnahme, deren Ursprung
-historische Gründe hat.\footnote{Es würde den Ramen dieses Skripts sprengen, 
-näher auf diese Gründe einzugehen.}
+historische Gründe hat.
 
-Beachte, dass man das Versetzungszeichen \emph{vor} der Note schreibt. 
+Beachte, dass man das Versetzungszeichen \emph{links vor} der Note 
+auf gleicher Höhe schreibt. 
 Siehe auch \autoref{verszeichen} 
-\image{lilypond/versetzung.png}{Notenschrift mit Versetzungszeichen}{verszeichen}{5}
+\image{lilypond/versetzung.png}{Notenschrift mit
+     Versetzungszeichen}{verszeichen}{5}
 
 Die Note zwischen \emph{c} und \emph{d} kann man erreichen, indem man das 
 \emph{c} zum \emph{cis} erhöht.
@@ -285,7 +295,10 @@ Die sieben Stammtöne ergeben mit den fünf Zwischentöne insgesamt zwölf Töne
 	\label{toene}
 \end{table}
 Die kleine, eingeklammerte Notennamen (z.B. \emph{his}) werden in der 
-Regel nicht benutzt, auch wenn sie theoretisch korrekt wären.
+Regel eher selten benutzt, auch wenn sie theoretisch korrekt wären.
+
+%\subsection{Tonarten}
+%Lorem Ispum
 
 \chapter{Rhythmus}
 \section{Notenwerte}
@@ -294,12 +307,11 @@ muss auch wissen, wann der nächste Ton folgt. Es gibt Töne die länger oder k�
 dauern als andere. Wie lange ein Ton dauert 
 wird von seinem Wert (der Notenwert)\comment{Notenwert $\rightarrow$ Dauer}
 bestimmt. Es gibt folgende Notenwerte%
-\footnote{Es gibt noch den Brevis, der zweimal so lange dauert wie eine ganze 
-Note, und die Longa die viermal so lange dauert. Diese werden seit dem 19. Jahrhundert 
-nicht mehr benutzt, und haben für die moderne Musikpraxis keine Bedeutung. Notenwerte 
-kürzer als die 32-tel Note gibt es zwar, sind jedoch nicht Gegenstand der Prüfung.}
+\footnote{Notenwerte 
+kürzer als die 32-tel Note gibt es zwar, sind jedoch 
+nicht Gegenstand der Prüfung.}
 (siehe \autoref{notenwerte}).
-\begin{table}[ht]
+\begin{table}[!ht]
 	\centering
 	\begin{tabular}{|c|c|}
 	\hline \textbf{Name} & \textbf{Wert} \\
@@ -314,8 +326,9 @@ kürzer als die 32-tel Note gibt es zwar, sind jedoch nicht Gegenstand der Prüf
 	\caption{Die Notenwerte}
 	\label{notenwerte}
 \end{table}
-Diese Längenangaben sagen nichts darüber aus, wie lange (in Sekunden) eine Note dauert. 
-Es ist lediglich festgelegt, dass z.B. eine ganze Note viermal so lange dauert wie eine
+Diese Werte sagen nichts darüber aus, wie lange (in Sekunden) eine Note dauert. 
+Es ist lediglich festgelegt, dass z.B. eine ganze Note 
+viermal so lange dauert wie eine
 Viertelnote. Die Zeitspanne für einen Notenwert kann der Spieler selber 
 festlegen. Man kann ein Lied schneller oder langsamer anstimmen.
 
@@ -323,7 +336,8 @@ Die Notenzeichen zu den Notenwerte sind in \autoref{notenzeichen} dargestellt.%
 \image{lilypond/notenwerte.png}{die ganze Note, halbe Note, Viertelnote,
 Achtelnote, Sechszehntelnote und die 32-tel Note}{notenzeichen}{8}
 Die Noten mit einem Wert kürzer als die Viertelnote (das sind die mit Fähnchen) 
-werden, falls es mehrere hintereinander gibt, oft zusammengefasst. Die Fähnchen werden 
+werden, falls es mehrere hintereinander gibt, oft zusammengefasst. 
+Die Fähnchen werden 
 durch einen Balken ersetzt so wie in \autoref{balken}.
 \image{lilypond/balken.png}{mehrere Achtel- und Sechszehntelnote zusammengefasst}{balken}{6.5}
 
