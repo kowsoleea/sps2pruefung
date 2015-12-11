@@ -1,0 +1,185 @@
+\documentclass[10pt,utf8,a4paper,twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[a4paper, inner=2cm, top=3cm, bottom=2cm, textwidth=14cm]{geometry}
+\usepackage{hyperref}
+
+%
+%pagestyle
+\pagestyle{fancy}
+%\fancyhead[LE, RO]{\thepage}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\linespread{1.2}
+
+\newcommand{\comment}[1]{\marginpar{\textsf{\raggedright{#1}}}}
+%
+%author / title
+\title{Kinderpflege - extern - Musik\\ \vspace{5mm}
+    \small{ein Leitfaden\\für die externe Kinderpflegeprüfung\\in das Fach Musik}
+}
+\author{Ivanildo Kowsoleea\\Fachakademie für Sozialpädagogik Mühldorf}
+\date{Mühldorf, im Januar 2014}
+
+
+%
+% document
+\begin{document}
+\maketitle
+
+
+\thispagestyle{empty}
+\tableofcontents
+
+\chapter{Einleitung}
+\section{Warum dieses Skript}
+Seit einigen Jahren müssen in Bayern diejenigen, die an einer Fachakademie für Sozialpädago\-gik das 
+einjährige Sozialpädagogische Seminar (SPS) absolvieren (die sogenannte Quereinsteiger) und noch keine abgeschlossene Berufsausbildung
+Nachweisen können, eine externe Prüfung zur KinderpflegerIn ablegen. Da diese PraktikantInnen nur ein Tag
+in der Woche zur Schule kommen, gibt es wenig Unterrichtszeit, in der man diese KandidatInnen auf die
+Prüfung vorbereiten kann. Dieses Skript möchte den theoretischen Prüfungsstoff im Fach Musik zusammenhängend darstellen, damit ebendiese Quereinsteiger sich selbstständig auf die Musikprüfung vorbereiten können.
+
+\section{Zur Prüfung - Kinderpflege als externer Bewerber}
+Während der Prüfung muss man nachweisen, dass man in der Lage ist sich ein Kinderlied anzueignen, 
+dieses zum Klingen zu bringen (dies singend und spielend), zu begleiten und mit Kindern zu Singen. Dazu sollen
+Sprache (der Liedtext) und Bewegung (Tanz) sinnvoll eingesetzt werden.
+
+Damit die KandidatIn sich ein neues Lied aneignen kann, wird zuerst das Notenlesen behandelt. Danach wird auf 
+einfache Begleitungsarten eingegangen. Ein sinnvolles Musizieren ist nur möglich wenn
+die Instrumente, die man mit Kindern einsetzen kann bekannt sind. Deshalb werden Schlag- und Stabinstrumente
+besprochen. Zum Schluss gibt es noch einige Tipps für das Musizieren mit Kindern von drei bis sechs Jahren.
+%
+% Kapitel: Tonsystem
+%
+\chapter{Unser Tonsystem}
+\section{Unsere Stammtöne}
+In unserem Tonsystem gibt es sieben Töne. Von diesen sieben Töne, die auch Stammtöne 
+\comment{Stammtöne}
+genannt werden, 
+leitet man noch fünf andere Töne ab. Insgesamt besteht unser Tonsystem aus zwölf verschiedene Töne.
+
+Die Stammtöne sind: \emph{c, d, e, f, g, a, h.} Siehe auch \autoref{stammtoene}
+
+Diese Töne kann man beliebig -- höher oder tiefer -- wiederholen. Nach dem \emph{h} kommt wieder
+\emph{c, d, e\dots} und vor dem c findet man \emph{\dots g, a, h.}
+
+Wenn man die Töne von einem \emph{c} zum nächsten \emph{c} zählt (wobei man beide \emph{c's} mit zählt)
+kommt man auf acht Töne. Dieser Abstand \emph{c --- c} nennt man \emph{Oktave}\footnote{von dem lateinischen \glqq octavus\grqq -- der achte}.
+\comment{Oktave}
+
+Es gibt also viele \emph{c's} oder viele \emph{g's}. Um anzudeuten welches \emph{c} man meint muss man  zusätzlich angeben in welcher Oktave sich der Ton befindet. Die Stammtöne in \autoref{stammtoene} gehören
+zu der \emph{eingestrichene Oktave} --- man sagt: \emph{c-eins, d-eins \dots} --- man schreibt 
+\emph{$c^{1}, d^{1}, \dots$}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=7cm]{stammtoene.png}
+    \caption{Die Stammtöne in Notenschrift}
+    \label{stammtoene} 
+\end{figure}
+
+Die nächsthöhere Oktave ist die \emph{zweigestrichene} Oktave: \emph{$c^{2}, d^{2}, \dots $}. Danach folgt die dreigestrichene Oktave und so weiter. Die Oktave unter der eingestrichene heißt die \emph{kleine} Oktave (\emph{c, d, e, \dots}). Die Oktave darunter heißt \emph{große} Oktave (\emph{C, D, \dots}). Danach folgen die \emph{Kontraoktave} (\emph{$ C_{1}, D_{1},\dots $}) und die \emph{Subkontraoktave} 
+(\emph{$C_{2}, D_{2}, \dots$}). Eine noch tiefere Oktave gibt es in der Praxis nicht, weil deren Töne so tief wären, dass man sie nicht mehr hören kann.
+
+Stimmen von Kindern \comment{Kinderstimme} und von den meisten Frauen bewegen sich in der \emph{ein- und zweigestrichenen Oktave}. Männerstimmen können (bei Bässen) die \emph{große Oktave} erreichen, aber erklingen meistens in der \emph{kleinen Oktave}.
+
+%
+%
+%
+\section{Versetzungszeichen}
+Die Abstände zwischen den sieben Stammtönen sind nicht alle gleich. Meistens befindet sich zwischen
+zwei Tönen ein Ganztonschritt. Jedoch zwischen dem \emph{e} und \emph{f} und zwischen dem \emph{h} und
+\emph{c} befindet sich ein Halbtonschritt. Die Abstände sind wie folgt:
+
+\begin{center}
+     \emph{$ c  -  d  -  e \cdot f  -  g  -  a  -  h \cdot c $}
+\end{center}
+
+wobei der Strich ($-$) einen Ganztonschritt zeigt und der Punkt ($\cdot$) einen Halbtonschritt.
+
+Der kleinster Abstand in unserem Tonsystem ist der Halbtonschritt.
+\comment{Halbtonschritt\\Ganztonschritt} Zwei Halbtonschritte nacheinander 
+ergeben einen Ganztonschritt. Deswegen gibt es zwischen dem \emph{c} und dem \emph{d} noch einen 
+Zwischenton. So einen Zwischenton gibt es auch zwischen \emph{d} und \emph{e}, \emph{f} und \emph{g},
+\emph{g} und \emph{a} und zwischen \emph{a} und \emph{h}, also dort wo es in der Zeile mit den Abständen
+einen Strich gibt. Ein Blick auf der Klaviertastatur zeigt uns wo es Zwischentöne gibt und wo nicht 
+(siehe \autoref{klavier}). Die weiße Tasten entsprechen den Stammtönen und die schwarze Tasten den 
+Zwischentönen.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=5cm]{klavier.jpg}
+    \caption{Klaviertastatur}
+    \label{klavier}
+\end{figure}
+
+Unsere Art Musik zu notieren gibt uns die Möglichkeit, einen Ton um einen Halbtonschritt 
+höher oder Tiefer zu versetzen. Dazu schreibt man ein Versetzungszeichen 
+(ein \emph{Kreuz} oder ein \emph{b}) vor einer Note. \comment{Kreuz: $\sharp$\\b: $\flat$}
+ Ein \emph{Kreuz} macht eine Note höher. Ein \emph{b} macht eine 
+Note tiefer. Ein Kreuz sieht so aus: $\sharp$, und ein b: $\flat$.
+
+Um eine Versetzung auszudrucken ändert man den Namen des Tons. Eine Erhöhung deutet man an mit der
+Silbe -is die man hinter den Notennamen setzt. Ein \glqq tiefergelegten\grqq Ton bekommt die Silbe 
+-es angehängt. Einige Ausnahmen gibt es; siehe dazu \autoref{notennamen}.
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline 
+    $\flat$ & Stammton & $\sharp$ \\ 
+    \hline \hline
+    ces & c & cis \\ 
+    \hline 
+    des & d & dis \\ 
+    \hline 
+    \textbf{es} & e & eis \\ 
+    \hline 
+    fes & f & fis \\ 
+    \hline 
+    ges & g & gis \\ 
+    \hline 
+    \textbf{as} & a & ais \\ 
+    \hline 
+    \textbf{b(!)} & h & his \\ 
+    \hline 
+    \end{tabular} 
+    \caption{Notennamen der Stammtönen und der Zwischentönen}
+    \label{notennamen}
+\end{table}
+
+Die Note zwischen \emph{c} und \emph{d} kann man erreichen indem man das \emph{c} zum \emph{cis} erhöht.
+Diese Note lässt sich aber ebenso erreichen indem man das \emph{d} zum \emph{des} heruntersetzt. Diese Note
+hat also zwei Namen, abhängig davon, mit welcher Stammton ich angefangen habe (\emph{c} oder \emph{d}). Beide Bezeichnungen sind korrekt.
+
+\section{Tonleiter}
+\section{Tonart}
+
+
+\chapter{Rhythmus}
+\section{Notenwerte}
+\section{Verlängerung}
+\section{Das Zählen - Das Metrum}
+
+\chapter{Melodien}
+\section{Rhythmus}
+\section{Tonhöhenverlauf}
+\section{Zusammenhang von Rhythmus und Text}
+
+\chapter{Begleitung}
+\section{Akkorde}
+\section{Begleitung mit Grundtönen}
+\section{Begleitung mit einem Bordun}
+
+\chapter{Instrumentenkunde}
+\section{Schlaginstrumente}
+\section{Melodieinstrumente}
+\section{Begleitungsinstrumente}
+
+\chapter{Musizieren mit Kindern}
+\section{Text}
+\section{Bewegung}
+\section{Einsatz von Instrumenten}
+
+\end{document}

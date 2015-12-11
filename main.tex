@@ -1,24 +1,15 @@
 \documentclass[10pt,a4paper,twoside]{report}
-\usepackage{graphicx}
 \usepackage[ngerman]{babel}
+\usepackage{graphicx}
 \usepackage{fancyhdr}
-\usepackage{leading}
 \usepackage{fontspec}
+\usepackage{leading}
 \usepackage[hidelinks]{hyperref}
-\usepackage{amsmath}
 
-\defaultfontfeatures{Ligatures=TeX}
-\setmainfont{Garamond}
-\setsansfont{Agfa Rotis Semisans}
-\setmonofont{Consolas}
+\setmainfont[Ligatures=TeX]{Palatino Linotype}
+\setsansfont[Ligatures=TeX]{Calibri}
 
-\textwidth 12cm
-\marginparwidth 3cm
-\marginparsep 8mm
-\parindent 0cm
-\parskip 2pt
-
-
+%
 %pagestyle
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{} }
@@ -26,27 +17,38 @@
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
 \fancyhead[LO,RE]{\nouppercase \leftmark}
-\fancyheadoffset[LE,RO]{38mm}
+\fancyheadoffset[LE,RO]{35mm}
 
 \fancypagestyle{plain}{
 	\fancyhf{}
 	\fancyfoot[CE, CO]{\thepage}
 	\renewcommand{\headrulewidth}{0pt}
 }
+%
+% textwidth
+\textwidth 13cm
+\marginparwidth 3cm
+\marginparsep 5mm
+\parskip 0pt
+\parindent 0pt
+
+\renewcommand{\labelitemi}{$\cdot$}
 
 
+%creates a marginpar with sans-serif font
+\newcommand{\comment}[1]{
+	\marginpar{
+		\textsf{#1}
+	}
+}
 
-\author{Ivanildo Kowsoleea\\Fachakademie für Sozialpädagogik Mühldorf}
-\title{{\huge Musikalische Kalligrafie}\\
-{\small oder: wie schreibe ich Noten richtig }}
-\date{im Januar 2014}
-
-\newcommand{\comment}[1]{\marginpar{\begin{flushleft}
-            \textsf{#1}
-        \end{flushleft}}}
-
+% makes an image
+% arg1: filename of image
+% arg2: caption
+% arg3: label (for \autoref{} )
+% arg4: width in cm
 \newcommand{\image}[4]{
-	\begin{figure}[!ht]
+	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=#4cm]{#1}
 		\caption{#2}
@@ -54,290 +56,601 @@
 	\end{figure}
 }
 
+%sets quote evironment
+\newcommand{\myquote}[1]{
+	\hspace{15mm}
+	\parbox{100mm}{
+		#1
+	}
+	\ \\
+}
+
+%
+%author / title
+\title{{\Huge Kinderpflege -- Musik}\\ \vspace{4mm}
+    \small{ein Leitfaden\\
+    für die Abschlussprüfung als andere Bewerber\\ 
+    zum Erwerb des Berufsabschlusses\\ 
+    als Staatlich geprüfter Kinderpfleger/\\ 
+    Staatlich geprüfte Kinderpflegerin\\
+    an der Fachakademie für Sozialpädagogik\\
+    in das Fach Musische Gestaltung und Bewegungserziehung}
+}
+\author{Ivanildo Kowsoleea,\\Fachakademie für Sozialpädagogik Mühldorf}
+\date{Mühldorf, im Januar 2014}
+
+\hyphenation{Quin-te O-ber-quin-te So-zial-pä-da-go-gik Hol-län-di-schen vier Zwei-vier-tel-takt 
+	Ak-kord Ak-kor-de be-fin-det ge-spielt}
+
+%
+% document
 \begin{document}
 \maketitle
 \tableofcontents
 
-\leading{12pt}
-\chapter{Einzelteile}
+\parskip 4pt
+\leading{13.0pt}
+\chapter{Einleitung}
+\section{Warum dieses Skript}
+Seit einigen Jahren müssen in Bayern diejenigen, die an einer Fachakademie für 
+Sozialpädagogik das 
+einjährige Sozialpädagogische Seminar (SPS) absolvieren 
+(die sogenannte Quereinsteiger) und keine abgeschlossene Berufsausbildung
+aufweisen, eine Prüfung zur KinderpflegerIn ablegen.%
+\footnote{Siehe FakOSozPäd Anlage 3, Ziffer 10.1.2, Satz 2}
 
-\section{Der Schlüssel}
+%: Erzieherpraktikanten, die unmittelbar in das zweite Jahr des Sozialpädagogischen Seminars eintreten und keine abgeschlossene Berufsausbildung in einem staatlich anerkannten Ausbildungsberuf aufweisen, haben sich einer Abschlussprüfung als andere Bewerber zum Erwerb des Berufsabschlusses als Staatlich geprüfter Kinderpfleger/ Staatlich geprüfte Kinderpflegerin an der Fachakademie für Sozialpädagogik zu unterziehen}
 
-Zuerst befassen wir uns mit dem Notenschlüssel. Es gibt drei Arten,
-die G-Schlüssel, die F-Schlüssel und die C-Schlüssel
-(siehe \autoref{notenschl}).
-\image{img/schluessel.png}{Der G-Schlüssel, der F-Schlüssel und der C-Schlüssel}{notenschl}{8}
+Da diese PraktikantInnen nur 0,5 Jahreswochenstunden Musikunterricht haben,
+gibt es wenig Unterrichtszeit in der die KanditadInnen auf die
+Prüfung vorbereitet werden können. Dieses Skript möchte den theoretischen Prüfungsstoff im 
+Fach Musik präsentieren, damit ebendiese Quereinsteiger sich zum Teil selbstständig 
+auf die Musikprüfung vorbereiten können.
 
-Der G-Schlüssel zeigt an, wo auf den Notensystem sich die Note $g^1$
-befindet, genau da, wo die schleife in der Mitte anfängt. 
-In Prinzip kann der G-Schlüssel auf jede Linie anfangen, heutzutage
-jedoch fängt er auf der zweiten Linie von unten an.
-In diesem Fall heißt der Schlüssel \emph{Violinschlüssel.}\comment{Violinschlüssel}
+\section{Zur Prüfung}
+Während der Prüfung in das Fach Musik muss man nachweisen, dass man in der Lage ist,
+sich ein Kinderlied anzueignen, 
+dieses zum Klingen zu bringen (sowohl singend als spielend), zu begleiten und mit 
+Kindern zu singen oder musizieren. Dazu sollen
+Sprache (der Liedtext) und Bewegung (Tanz, Spiele) sinnvoll eingesetzt werden.
 
-Der F-Schlüssel markiert die Note $f$ und der C-Schlüssel die Note $c^1$. Der F-Schlüssel auf der vierte Linie von unten nennt man auch \emph{Bassschlüssel.} Der C-Schlüssel auf der dritte Linie ist der \emph{Altschlüssel.}
+Damit der/die KandidatIn sich ein neues Lied aneignen kann, wird in diesem Skript zuerst das 
+Notenlesen behandelt. Danach wird auf 
+einfache Begleitungsarten eingegangen. Die Instrumentenkunde umfasst das kleine
+Schlagwerk. Abschließend gibt es noch einige Tipps für das Musizieren
+mit Kindern in Kindergartenalter.
 
-Für uns ist nur der Violinschlüssel (siehe \autoref{violinschl}) von Interesse.
-\image{img/violinschl.png}{Der Violinschlüssel}{violinschl}{3}
-Der Violinschlüssel fangt auf der zweiten Linie von unten an, hoch bis zur dritten 
-Linie, zurück zur untersten Linie, linksherum nach oben, außerhalb des Notensystems nach 
-links, und mittig nach unten.
+%
+% Kapitel: Tonsystem
+%
+\chapter{Tonsystem}
+\section{Die Stammtöne}
+In unserem Tonsystem gibt es sieben Töne. Von diesen sieben Töne, die auch Stamm\-tö\-ne 
+\comment{Stammtöne}
+genannt werden, 
+leitet man noch fünf andere Töne ab. Insgesamt besteht unser Tonsystem aus 
+zwölf verschiedenen Tönen.
 
-\section{Die Notenwerte}
-Der Wert einer Note, der Notenwert, gibt an, wie lange eine Note dauert.
-\comment{Notenwert = Dauer}
-Die Notenwerte die hier behandelt werden sind: die ganze Note, die halbe Note,
-die Viertelnote, die Achtelnote und die Sechzehntelnote. In \autoref{nwerte}
-sind diese Notenwerte einmal dargestellt.
-\image{img/nwerte.png}{von links nach rechts: die ganze Note, die halbe Note,
-die Viertelnote, die Achtelnote und die Sechzehntelnote}{nwerte}{8}
+Die Stammtöne sind: \emph{c, d, e, f, g, a, h.} Siehe auch \autoref{stammtoene}
+Diese Töne kann man beliebig -- höher oder tiefer -- wiederholen. Nach dem 
+\emph{h} kommt noch einmal
+\emph{c, d, e\dots} und vor dem c findet man \emph{\dots g, a, h.}
 
+Wenn man die Töne von einem \emph{c} zum nächsten \emph{c} zählt 
+(wobei man beide \emph{c's} mit zählt),
+findet man acht Töne. Dieser Abstand \emph{c --- c} nennt man 
+\emph{Oktave}\footnote{von dem lateinischen \glqq 
+	octavus\grqq -- der achte}.
+\comment{Oktave}
 
-\section{Der Notenkopf}
-\label{notenkopf}
-Der Notenkopf darf nicht zu groß oder zu klein sein. Er passt genau zwischen 
-zwei Notenlinien. Eine Note wird nicht als Kreis gemalt. Der Kopf ist ein Oval 
-(gestreckter Kreis) der schräg von links unten nach rechts oben verläuft (siehe 
-\autoref{nkopf}).
+Es gibt folglich mehrere \emph{c's} oder \emph{g's}. 
+Um anzudeuten welches \emph{c} man meint, muss man  
+zusätzlich angeben in welcher Oktave sich der Ton 
+befindet. Die Stammtöne in \autoref{stammtoene} gehören
+zu der \emph{eingestrichene Oktave} --- man sagt: 
+\emph{c-eins, d-eins \dots} --- man schreibt
+ $c^{1}, d^{1}, \dots$
+\image{lilypond/stammtoene.png}{Die Stammtöne in Notenschrift}{stammtoene}{6}
 
-\image{img/nkopfa.png}{der Notenkopf}{nkopf}{7}
+Die nächsthöhere Oktave ist die \emph{zweigestrichene} Oktave: 
+\emph{$c^{2}, d^{2}, \dots $}. Danach folgt die dreigestrichene Oktave
+und so weiter. Die Oktave unter der eingestrichene heißt die 
+\emph{kleine} Oktave (\emph{c, d, e, \dots}). Die Oktave darunter 
+heißt \emph{große} Oktave (\emph{C, D, \dots}). Danach folgen die 
+\emph{Kontraoktave} (\emph{$ C_{1}, D_{1},\dots $}) und die 
+\emph{Subkontraoktave} 
+(\emph{$C_{2}, D_{2}, \dots$}). Eine noch tiefere Oktave gibt es 
+nicht, weil deren Töne so tief wären, dass man sie nicht mehr hören könnte.
 
-Ein Notenkopf kann offen oder geschlossen sein. 
-Ganze und halbe Noten haben einen offenen Kopf, alle andere Notenwerte werden
-mit einem geschlossenen (schwarzen) Notenkopf gemalt (siehe \autoref{nkopf2}).
+\image{lilypond/oktaven.png}{ein Teil der kleinen Oktave, ein- und zweigestrichenen Oktave}{oktaven}{13}
 
-\image{img/nkopf2.png}{ein geschlossener und ein offener Notenkopf}{nkopf2}{4}
+Stimmen von Kindern im Kindergartenalter %
+\footnote{vgl. Ernst, Manfred: 
+Praxis Singen mit Kindern, S. 13}
+\comment{Umfang d. Kinderstimme}
+bewegen sich in der Regel von 
+$f^1$~bis~$d^2.$ 
+Männer singen meistens in der \emph{kleinen Oktave}, Frauen in der Regel in
+der \emph{eingestrichenen Oktave.}
+%
+%
+%
+\section{Versetzungszeichen}
+Die Abstände zwischen den sieben Stammtönen sind nicht alle gleich. 
+Meistens befindet sich zwischen
+zwei Tönen ein Ganztonschritt. Jedoch zwischen dem \emph{e} und 
+\emph{f} und zwischen dem \emph{h} und
+\emph{c} befindet sich ein Halbtonschritt. Die Abstände sind wie folgt:
+\begin{center}
+     \emph{$ c  -  d  -  e \cdot f  -  g  -  a  -  h \cdot c $}
+\end{center}
+wobei der Strich ($-$) einen Ganztonschritt zeigt und der Punkt 
+($\cdot$) einen Halbtonschritt.
 
+Der kleinster Abstand in unserem Tonsystem ist der Halbtonschritt.
+\comment{Halbtonschritt\\Ganztonschritt} Zwei Halbtonschritte nacheinander 
+ergeben einen Ganztonschritt. Deswegen gibt es zwischen dem 
+\emph{c} und dem \emph{d} noch ein
+Zwischenton. So ein Zwischenton gibt es auch zwischen
+\emph{d} und \emph{e}, \emph{f} und \emph{g},
+\emph{g} und \emph{a} und zwischen \emph{a} und \emph{h}, 
+eben dort wo es in der Zeile mit den Abständen
+einen Strich gibt. Ein Blick auf der Klaviertastatur 
+zeigt uns wo es Zwischentöne gibt und wo nicht 
+(siehe \autoref{klavier}). Die weiße Tasten entsprechen 
+den Stammtönen und die schwarze Tasten den 
+Zwischentönen.
+\image{klavier.jpg}{Klaviertastatur}{klavier}{5}
 
-\section{Der Notenhals}
-Der Notenhals hat in etwa die Länge von drei 
-\comment{Hals $ \rightarrow $\\ drei Zwischenräume}Zwischenräumen.%
-\footnote{Wenn die betreffende Note sich unter einem Balken befindet, kann es sein, dass der Hals verlängert oder verkürzt werden muss. Siehe dazu auch \autoref{balkensection}.}
-Er kann sowohl nach 
-oben als auch nach unten gezeichnet werden.
-Notenhälse die nach oben zeigen, malt man rechts von der Note. Ein Hals der nach 
-unten zeigt, kommt links von der Note (siehe \autoref{hals}).
-\image{img/hals.png}{der Notenhals}{hals}{4}
+Unsere Art Musik zu notieren gibt uns die Möglichkeit, 
+einen Ton um einen Halbtonschritt 
+höher oder Tiefer zu versetzen. Dazu schreibt man ein Versetzungszeichen 
+(ein \emph{Kreuz} oder ein \emph{b}) vor einer Note.
+\comment{Kreuz: $\sharp$\\b: $\flat$}
+Ein \emph{Kreuz} macht eine Note um einen Halbtonschritt höher. Ein \emph{b} macht eine 
+Note um einen Halbtonschritt tiefer. Ein Kreuz sieht so aus: $\sharp$, und ein b: $\flat$.
 
-Alle Noten bis auf die ganze Note haben einen Hals. In der 
-Regel werden Noten, die über der dritte Linie stehen, mit dem 
-Hals nach unten gezeichnet, die übrige Noten zeichnet
-man mit dem Hals nach oben.
+Um eine Versetzung auszudrucken ändert man den Namen des Tons. 
+Eine Erhöhung deutet man an mit der
+Silbe -is, die man den Notennamen anhängt. 
+Ein \glqq tiefergelegten\grqq\  Ton bekommt die Silbe 
+-es angehängt. Es gibt einige Ausnahmen. Siehe dazu die 
+fettgedruckten Einträge in der \autoref{notennamen}.
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline 
+    $\flat$ & Stammton & $\sharp$ \\ 
+    \hline \hline
+    ces & c & cis \\ 
+    \hline 
+    des & d & dis \\ 
+    \hline 
+    \textbf{es} & e & eis \\ 
+    \hline 
+    fes & f & fis \\ 
+    \hline 
+    ges & g & gis \\ 
+    \hline 
+    \textbf{as} & a & ais \\ 
+    \hline 
+    \textbf{b(!)} & h & his \\ 
+    \hline 
+    \end{tabular} 
+    \caption{Notennamen der Stammtönen und der Zwischentönen}
+    \label{notennamen}
+\end{table}
 
-Bewegen Sie beim Malen der Notenhälse den Stift immer von oben 
-nach unten.
+Beachte den Notennamen in der letzten Zeile, in der linke Spalte. 
+Diese Note \emph{(b)} hätte eigentlich \emph{hes} heißen müssen.
+\comment{hes $\rightarrow$ b}
+Es ist jedoch eine Ausnahme, deren Ursprung
+historische Gründe hat.\footnote{Es würde den Ramen dieses Skripts sprengen, 
+näher auf diese Gründe einzugehen.}
 
-\section{Hilfslinien}
-Wenn Noten so tief (oder so hoch) sind, dass sie nicht mehr auf das
-Notensystem (die fünf Linien) gezeichnet werden können, braucht man Hilfslinien
-um die genaue Lage der Noten deutlich zu machen.
+Beachte, dass man das Versetzungszeichen \emph{vor} der Note schreibt. 
+Siehe auch \autoref{verszeichen} 
+\image{lilypond/versetzung.png}{Notenschrift mit Versetzungszeichen}{verszeichen}{5}
 
-Eine Hilfslinie ist etwa so lange wie zwei Zwischenräume. Der Abstand
-zwischen einzelnen Hilfslinien und zwischen Hilfslinie und Notensystem
-beträgt genau einen Zwischenraum. Sie dazu \autoref{hlinie}.
+Die Note zwischen \emph{c} und \emph{d} kann man erreichen, indem man das 
+\emph{c} zum \emph{cis} erhöht.
+Diese Note lässt sich jedoch ebenso erreichen, indem man das 
+\emph{d} zum \emph{des} heruntersetzt. Dieser Zwischenton
+hat daher zwei Namen, 
+\comment{cis = des}
+abhängig davon, mit welcher Stammton man anfängt
+(\emph{c} oder \emph{d}). Beide Bezeichnungen sind korrekt.
 
-\image{img/hlinie-1.png}{Eine halbe Note mit zwei Hilfslinien}{hlinie}{5}
+Die sieben Stammtöne ergeben mit den fünf Zwischentöne insgesamt zwölf Töne pro Oktave. Diese Töne sind in \autoref{toene} nochmal dargestellt.
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|p{5mm}|}
+	\hline 
+	c\newline {\tiny (his)} & 
+	cis\newline des & 
+	d & 
+	dis \newline es 
+	& e\newline {\tiny (fes)} & 
+	f\newline {\tiny (eis)} & 
+	fis\newline ges & 
+	g & 
+	gis\newline as 
+	& 
+	a & 
+	ais\newline b & 
+	h \newline {\tiny (ces)} \\ 
+	\hline 
+	\end{tabular} 
+	\caption{Die Töne unseres Tonsystems}
+	\label{toene}
+\end{table}
+Die kleine, eingeklammerte Notennamen (z.B. \emph{his}) werden in der 
+Regel nicht benutzt, auch wenn sie theoretisch korrekt wären.
 
-\section{Fähnchen und Balken}
-\label{balkensection}
-Achtelnoten und Sechzehntelnoten werden mit Fähnchen dargestellt. 
-Die Achtelnote bekommt 
-ein Fähnchen, die Sechszehntelnote zwei. Siehe dazu \autoref{faenchen}.
-Beachte, dass Fähnchen immer nach rechts gemalt werden, 
-unabhängig davon, ob der Hals 
-nach oben oder nach unten gezeichnet wurde.
-Beachte, dass die Fähnchen etwa gleich lang sind wie der Notenhals.
+\chapter{Rhythmus}
+\section{Notenwerte}
+Es reicht nicht, zu wissen welcher Ton man spielen (oder singen) soll. Man
+muss auch wissen, wann der nächste Ton folgt. Es gibt Töne die länger oder kürzer
+dauern als andere. Wie lange ein Ton dauert 
+wird von seinem Wert (der Notenwert)\comment{Notenwert $\rightarrow$ Dauer}
+bestimmt. Es gibt folgende Notenwerte%
+\footnote{Es gibt noch den Brevis, der zweimal so lange dauert wie eine ganze 
+Note, und die Longa die viermal so lange dauert. Diese werden seit dem 19. Jahrhundert 
+nicht mehr benutzt, und haben für die moderne Musikpraxis keine Bedeutung. Notenwerte 
+kürzer als die 32-tel Note gibt es zwar, sind jedoch nicht Gegenstand der Prüfung.}
+(siehe \autoref{notenwerte}).
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|}
+	\hline \textbf{Name} & \textbf{Wert} \\
+	\hline ganze Note & $1$ \\ 
+	\hline halbe Note & $\frac{1}{2}$ \\ 
+	\hline Viertelnote & $\frac{1}{4}$ \\ 
+	\hline Achtelnote & $ \frac{1}{8} $ \\ 
+	\hline Sechszehntelnote & $ \frac{1}{16} $ \\ 
+	\hline 32-tel Note & $ \frac{1}{32} $ \\ 
+	\hline 
+	\end{tabular} 
+	\caption{Die Notenwerte}
+	\label{notenwerte}
+\end{table}
+Diese Längenangaben sagen nichts darüber aus, wie lange (in Sekunden) eine Note dauert. 
+Es ist lediglich festgelegt, dass z.B. eine ganze Note viermal so lange dauert wie eine
+Viertelnote. Die Zeitspanne für einen Notenwert kann der Spieler selber 
+festlegen. Man kann ein Lied schneller oder langsamer anstimmen.
 
-\image{img/faehnchen.png}{Achtel- und Sechszehntelnote mit
-    Fähnchen}{faenchen}{4}%
+Die Notenzeichen zu den Notenwerte sind in \autoref{notenzeichen} dargestellt.%
+\image{lilypond/notenwerte.png}{die ganze Note, halbe Note, Viertelnote,
+Achtelnote, Sechszehntelnote und die 32-tel Note}{notenzeichen}{8}
+Die Noten mit einem Wert kürzer als die Viertelnote (das sind die mit Fähnchen) 
+werden, falls es mehrere hintereinander gibt, oft zusammengefasst. Die Fähnchen werden 
+durch einen Balken ersetzt so wie in \autoref{balken}.
+\image{lilypond/balken.png}{mehrere Achtel- und Sechszehntelnote zusammengefasst}{balken}{6.5}
 
-Die Fähnchen von mehreren Achtel- oder Sechzehntelnoten hintereinander können 
-zusammengefügt werden zu einem Balken. Dadurch wird die Notation übersichtlicher.
-Achtelnoten bekommen nur einen Balken, die Sechzehntelnoten einen Doppelbalken. 
-Beide Sind dargestellt in \autoref{balken}.
+\section{Metrum und Taktart}
+Um die Geschwindigkeit eines Musikstückes bestimmen zu können, benutzt man
+den Grundschlag. Das ist ein regelmäßig wiederkehrender Impuls, der dazu dient,
+die Orientierung zu ermöglichen. \comment{Metrum}Dieser regelmäßig 
+wiederkehrender Impuls nennt man auch \emph{Metrum.}
 
-\image{img/balken.png}{mehrere Achtel- und Sechzehntelnoten 
-    mit Balken}{balken}{7}
-
-Handelt es sich um Noten mit unterschiedlichen Tonhöhen, 
-muss man gegebenenfalls die 
-Länge der Hälse anpassen.
-Die dritte Note in \autoref{balken2} bekommt einen längeren Hals, weil sonst die
-Hälse der ersten oder der vierten Note zu kurz wären.
-\image{img/balken2.png}{Noten unterschiedlicher Tonhöhe 
-    mit Balken}{balken2}{3.5}
-
-\section{Die Pausen}
-Zu jedem Notenwert gibt es einen dazugehörigen Pausenwert. 
-Die Pausen sind in \autoref{pausen} 
-dargestellt.
-
-\image{img/pausen.png}{die ganze Pause, halbe Pause, viertel Pause, 
-    achtel Pause und die sechzehntel Pause}{pausen}{6}
-
-\subsection{Ganze und halbe Pause}
-Die ganze und die halbe Pause sind Rechtecken, die etwa 
-zweidrittel eines Zwischenräumens dick
-und etwas weniger als zwei Zwischenräume breit sind. 
-Die ganze Pause hängt unterhalb der 
-vierten Linie (von unten).\comment{ganze Pause hängt}
-Die halbe Pause liegt auf der dritten Linie.\comment{halbe Pause liegt}
-Siehe dazu \autoref{pause2}.
-\image{img/pausen2c.png}{ungefähre Abmessungen der ganzen und 
-    halben Pause}{pause2}{8}
-
-\subsection{Die viertel Pause}
-Die viertel Pause fängt oben zwischen der vierten und fünften Linie an, geht schräg nach rechts unten,
-danach weiter lach links innerhalb vom dritten Zwischenraum (von unten), anschließend nach rechts,
-nach unten
-zum zweiten Zwischenraum, um da mit einem Bogen nach links abzuschließen. 
-Siehe dazu \autoref{pause3}. 
-\image{img/pausen3c.png}{die viertel Pause}{pause3}{5.5}
-
-\subsection{Achtel- und Sechzehntelpausen}
-In \autoref{pause4} werden die Achtel- und die Sechzehntelpause gezeigt.
-\image{img/pausen4.png}{die Achtel- und die Sechzehntelpause}
-{pause4}{5.5}
-
-Man fängt im dritten Zwischenraum an, schreibt einen kleinen Bogen nach rechts,
-anschließend eine gerade Linie nach unten links. Diese Linie sollte fast so lange sein
-wie zwei Zwischenräume -- bei der Sechzehntelnote wie drei Zwischenräume. Siehe dazu
-\autoref{pause5}
-\image{img/pausen5c.png}{die Achtelpause mit Zeichenanleitung}{pause5}{5.5}
-
-
-\section{Die Versetzungszeichen}
-Die Versetzungszeichen (auch Vorzeichen) sind: das Kreuz, 
-\comment{Kreuz $\sharp$\\Be $\flat$\\Auflösungszeichen $\natural$}
-das Be und das Auflösungszeichen. Sie sind in 
-\autoref{vzeichen} abgebildet. Beachte, dass beim Kreuz, die beiden Querstriche
-sich etwa einen Zwischenraum auseinander befinden. 
-Ebenso ist der "`Bauch"'
-des Be etwa ein Zwischenraum groß, genauso wie die "`Raute"' beim 
-Auflösungszeichen.
-\image{img/vzeichen4.png}{das Kreuz, das Auflösungszeichen und das Be }
-{vzeichen}{6}
-
-Ein Versetzungszeichen befindet sich immer \emph{links} von der Note und auf der gleichen Höhe wie der Notenkopf. Siehe dazu \autoref{vzeichen2}
-\image{img/vzeichen2.png}{Position der Versetzungszeichen}{vzeichen2}{5}
-
-\chapter{Musiknotation}
-
-\section{Ein ganzes Lied}
-Wenn man ein Lied bzw. Musikstück in Notenschrift aufzeichnen soll, 
-empfiehlt es sich eine bestimmte Reihenfolge einzuhalten. Man schreibt
-Zeile für Zeile. Wie man die Zeilen im einzelnen erstellt wird in den
-nächsten Abschnitten erläutert.
-
-
-\section{Der Zeilenanfang}
-Am Anfang der Zeile, ganz links kommt der Notenschlüssel. Dann schreibt man,
-falls benötigt, die Vorzeichen (oder Versetzungszeichen) 
-die die Tonart bestimmen. 
-Danach erst kommt die Bezeichnung 
-der Taktart (z.B. $ \begin{smallmatrix}3 \\ 4\end{smallmatrix} $ 
-für einen 3-Vierteltakt). Siehe dazu 
-\autoref{anfang}.
-
-\image{img/anfang.png}{Anfang der ersten Zeile}{anfang}{4}
-
-Notenschlüssel und Vorzeichen (falls vorhanden) werden auf jeder Zeile
-wiederholt.\comment{Reiehnfolge:\\Notenschlüssel$ \rightarrow $\\
-Vorzeichen$ \rightarrow $\\Taktart}
-Die Taktart steht \emph{nur auf der ersten Zeile}. Falls ein 
-Wechsel der Taktart stattfindet, schreibt man die neue Taktart
-in den Takt wo der Wechsel statt 
-findet -- nicht vorne beim Zeilenanfang. 
-
-\section{Die Zeile}
-Auf einer Zeile stehen mehrere Takte. Zwischen den Takten und am Ende der Zeile
-malt man Orientierungsstriche -- die sogenannten Taktstriche.
-\comment{Taktstriche dienen der Orientierung.}
-Diese sind genau 4 Zwischenräume lang und gehen von der oberste bis 
-zur unterste Linie (siehe \autoref{zeile}).
-
-\image{img/zeile.png}{Erste Zeile mit Taktstrichen,
-    noch ohne Noten}{zeile}{12}
-
-Beim Schreiben muss man einschätzen,
-wie viele Takte auf der Zeile passen. 
-Drei bis vier Takte pro Zeile entspricht dem 
-Normalfall, falls es jedoch viele halbe und ganze Noten gibt, 
-kann es durchaus sein,
-dass mehr als vier takte in der Zeile platz haben. 
-Gibt es dagegen viele Sechzehntelnoten,
-passen vielleicht nicht mehr als 2 Takte in der Zeile.
-
-Nach dem Abschätzen malt man die Taktstriche. 
-Es ist nicht nötig, 
-alle Takte gleich breit 
-zu machen. Takte mit weniger Noten darf man schmäler zeichnen. 
-
-\section{der Takt}
-Jetzt verteilt man die Noten und Pausen auf die einzelne Takte. 
-In den Takt malt man erst 
-nur die Notenköpfe und eventuelle Pausen hin. Dabei malt man
-kleinere Notenwerte (Achtel, 
-Sechzehntel) etwas enger 
-zusammen als größere. Beachte natürlich, dass 
-manche Notenköpfe offen, andere jedoch 
-geschlossen sein müssen. Siehe dazu auch 
-\autoref{notenkopf} auf Seite \pageref{notenkopf}.
-
-\image{img/takt1-1.png}{1. Schritt: Noten ohne Hals}{takt1}{8}
-
-
-
-\section{Hälse, Balken}
-Wenn in einem Takt alle Notenköpfe eingeteilt wurden, 
-entscheidet man sich bei den Achtel- 
-und Sechzehntelnoten, ob man Balken oder Fähnchen 
-zeichnen möchte (siehe nochmal 
-\autoref{balkensection} auf Seite \pageref{balkensection}).
-
-Die Notenhälse die nicht mit Balken verbunden werden sollen, 
-kann man jetzt zeichnen (siehe \autoref{takt2}).
-
-\image{img/takt2-1.png}{2. Schritt: einzelne Notenhälse einzeichnen}
-{takt2}{8}
-
-Falls es eine Notengruppe gibt, die unter einen (oder zwei)
-Balken kommen sollen, malt man erst den Notenhals der linken Note
-der Gruppe, danach den Notenhals der rechten Note der Gruppe. 
-Ob die Hälse nach oben oder nach unten zeigen, 
-wird von der Mehrheit der Noten bestimmt (siehe \autoref{takt3}).
- 
-\image{img/takt3-1.png}{3. Schritt: Achtelgruppe links und rechts}{takt3}{8}
-
-Nachdem man den Balken gezogen hat (\autoref{takt4}), 
-\image{img/takt4-1.png}{4. Schritt: Der Balken}{takt4}{8}
-
-kann man die übrige Notenhälse dazu malen (\autoref{takt5}).
-\image{img/takt5-1.png}{4. Schritt: Notenhälse Vervollständigen}{takt5}{8}
-
-Diese Vorgehensweise (erst Köpfe, Pausen, danach Hälse und Balken)
-\comment{Köpfe, Hälse, Balken (Hälse)} 
-wiederholt man für die übrigen Takte der Zeile.
-
-\section{Der Schluss}
-Das Ende des Liedes bzw. des Musikstückes muss angegeben werden --
-aus der Notation soll hervorgehen, dass das Lied zu Ende ist.
-Dazu malt man als letzter Taktstrich einen Schlussstrich. 
-\comment{Schlussstrich}
-Dieser besteht
-aus einem dünnen und einem dicken (etwa 3x so dick) Strich 
-(siehe \autoref{schluss1}).
-
-\image{img/schluss1-1.png}{Letzte Zeile mit Schlussstrich}{schluss1}{12}
-
-\section{Ein Beispiel}
-In \autoref{beispiel} sehen Sie eine Melodie, bestehend aus acht Takte,
-auf zwei Zeilen untergebracht. Beachten Sie, dass die Taktart (hier
-$\begin{smallmatrix}3\\4\end{smallmatrix}$) nur auf der erste Zeile steht.
-Nicht alle Takte sind gleich breit. Die erste Zeile wird auf der rechten Seite
-von einem Taktstrich abgeschlossen. Die letzte Zeile hat ganz rechts
-einen Schlussstrich.
-Versetzungszeichen -- hier zwei Kreuze -- stehen auf beiden Zeilen.
+Die Impulse des Grundschlags sind in Gruppen unterteilt. So eine Gruppe heißt 
+ein \emph{Takt.}\comment{Takt}Pro Takt kann es zwischen zwei und neun
+Grundschläge geben. 
+In der Regel ändert sich die Anzahl der Impulse pro Takt während eines
+Liedes nicht, es gibt jedoch Ausnahmen. 
 
 
-\image{img/beispiel-1.png}{Ein vollständiges Beispiel}{beispiel}{12}
+Die Anzahl der Grundschläge pro Takt wird von der \emph{Taktart}%
+\comment{Taktart}bestimmt. Diese bestimmt auch welcher Notenwert
+mit dem Grundschlag übereinstimmt. Die Taktart wird mit zwei 
+übereinander gesetzte Zahlen angegeben. Die obere Zahl bestimmt die Anzahl
+der Grundschläge pro Takt -- die untere Zahl zeigt welcher Notenwert mit dem
+Grundschlag übereinstimmt.
+
+
+Einige Beispiele:
+\parskip 0pt
+\begin{itemize}
+\item In einem vierviertel-Takt $ \left( \begin{array}{c}\textbf{4} \\ \textbf{4} \end{array}\right)  $
+gibt es vier Schläge pro Takt; die Viertelnote dauert ein Grundschlag.
+\item In einem sechsachtel-Takt $ \left( \begin{array}{c}\textbf{6} \\ \textbf{8} \end{array}\right)  $
+gibt es sechs Schläge pro Takt wobei die Achtelnote ein Grundschlag dauert.
+\end{itemize}
+\parskip 3pt
+
+In Notenschrift werden die Noten die zu einem Takt gehören zwischen senkrechten 
+Strichen
+-- die Taktstriche -- gestellt.
+Der erster Impuls des Taktes bzw. die erste Note nach dem Taktstrich, wird
+leicht betont, damit hörbar wird, wann der Takt anfängt. Man zählt daher (z.B. 
+Viervierteltakt):
+
+\hspace{2cm}\textbf{eins} -- zwei -- drei --vier -- \textbf{eins} \dots
+
+und spielt/singt die erste Viertelnote im Takt etwas betont. In 
+\autoref{viervier}
+sind
+\image{lilypond/viervier.png}{einige Viertelnoten in Viervierteltakt}{viervier}{6}
+die Noten die mit einer \glqq 1\grqq\ markiert sind zu betonen. Dadurch, dass diese
+Betonung alle vier Schläge wiederkehrt, kann man den Viervierteltakt hören. Die  
+\comment{Hauptakzent} 
+Betontung auf dem erste Schlag des Taktes nennt man auch \emph{Hauptakzent.}
+
+\section{Rhythmus}
+Nicht alle Töne eines Liedes sind gleich lang. Dieser ungleiche Verteilung der 
+Tonlängen nennt man Rhythmus.\comment{Rhythmus}
+Betrachten wir beispielsweise das Lied \glqq Hänsel
+und Gretel\grqq\ dessen erste Zeile in \autoref{haensel} zu sehen ist. %
+Es gibt einen Viervierteltakt,
+die erste Note jedoch (eine halbe Note) dauert zweimal so lange wie die zwei
+Viertelnoten die danach folgen. 
+\image{lilypond/haensel.png}{Hänsel und Gretel}{haensel}{10}%
+
+Das Metrum ist ein regelmäßiger Ablauf von Taktschlägen,
+und das kann man als Hilfe benutzen um einen Rhythmus wie diesen auszuführen.
+Dazu zählt man leise mit (\textbf{eins,} zwei, drei vier, \textbf{eins,} \dots),
+und singt/spielt die Noten wie folgt (siehe \autoref{haensel2}):
+\image{lilypond/haensel2.png}{Metrum in Kombination mit Rhythmus}{haensel2}{10}
+
+\myquote{
+	Hän- {\footnotesize (\textbf{eins,} zwei)} sel {\footnotesize (drei)} und 
+	{\footnotesize (vier)} Gre- {\footnotesize (\textbf{eins,} zwei)}
+	tel {\footnotesize (drei)} ver- {\footnotesize (vier)} lie- 
+	{\footnotesize (\textbf{eins})} fen {\footnotesize (zwei)} sich 
+	{\footnotesize (drei)} im {\footnotesize (vier)}
+	Wald {\footnotesize (\textbf{eins,} zwei, drei, vier)}
+}
+
+So kann man einigermaßen sicher sein, dass die Notenwerte korrekt ausgeführt 
+werden.
+
+Falls es im Lied kleinere (kürzere) Notenwerte gibt als die, welche im Grundschlag 
+angegeben sind, muss man zwischen den Schlägen die Silbe \glqq und\grqq\ denken. 
+Beim Lied \glqq Grün, grün, grün sind \textellipsis\grqq\ (siehe \autoref{gruen})
+\image{lilypond/gruen.png}{Lied mit Achtelnoten}{gruen}{10}
+gibt es im dritten Takt vier Achtelnoten. Den Grundschlag bilden hier die 
+Viertelnoten, weil dieses Lied im Zweivierteltakt steht. Die Achtelnoten sind 
+demzufolge schneller als der Grundschlag.
+\image{lilypond/gruen2.png}{Zählweise bei Achtelnoten}{gruen2}{11}
+Deshalb zählt man im dritten Takt (siehe \autoref{gruen2}):
+
+\myquote{\textbf{eins} -- und -- zwei -- und\dots}
+
+Wenn man den Grundschlag in vier Teilen muss, wie es z.B. bei Sechzehntelnoten der
+Fall sein kann, zählt man: 
+
+\myquote{\textbf{eins} -- e -- un -- te -- zwei\dots}
+
+\image{lilypond/sechzehn.png}{Zählweise bei Sechzehntelnoten}{sechzehn}{7}
+
+\section{Haltebögen und Punktierte Noten}
+Eine Note die durch einen Haltebogen mit einer zweiten Note verbunden ist,
+wird langer gespielt/gesungen, und zwar so lange wie beide Notenwerte zusammen.
+Der Haltebogen\comment{Haltebogen} darf man nicht mit dem Bindebogen verwechseln.
+Man spricht von einem Haltebogen, wenn zwei Noten derselben Tonhöhe mit einander
+verbunden werden. Wenn beide Noten unterschiedliche Tonhöhen aufweisen, spricht man
+von einem Bindebogen. Dabei sollten die Noten verbunden gesungen werden -- 
+z.B. auf einer Textsilbe. Siehe dazu \autoref{bogen}.
+\image{lilypond/bogen.png}{ein Haltebogen und ein Bindebogen}{bogen}{6}
+
+Der erste bogen verbindet zweimal ein $c^2$. Es ist demnach ein Haltebogen, und man
+spielt \emph{einen} Ton der \emph{drei} Schläge dauert. Das erste $c^2$ dauert zwei 
+Schläge, das zweite $c^2$ ist eine Viertelnote und dauert einen Schlag. Beide Noten
+zusammen dauern deshalb ($2 + 1 = 3$) drei Schläge.
+
+Jetzt ist auch klar, wie man eine Note mit drei Schläge erstellen kann. Das ist 
+nicht möglich ohne den Einsatz des Haltebogens. Weil diese Situation
+\comment{Punkt verlängert um die Hälfte} (drei Schläge)
+öfter vorkommt, gibt es dafür eine vereinfachte Schreibweise; hinter der ersten (halbe)
+Note schreibt man einen Punkt. Siehe \autoref{bogen2}.
+\image{lilypond/bogen2.png}{eine punktierte halbe Note}{bogen2}{6}
+
+Der Punkt verlängert eine Note um die Hälfte ihres Wertes. Das geht auch bei anderen 
+Notenwerten, z.B. Eine punktierte Viertelnote in einem Dreivierteltakt dauert einen und 
+ein halben Schlag. Siehe dazu \autoref{schnee}.
+\image{lilypond/schnee.png}{der Anfang von \glqq Leise rieselt der Schnee\grqq }{schnee}{7}
+
+Wenn man den zweiten Takt zählen möchte, zählt man
+
+\myquote{
+	rie- {\footnotesize (\textbf{eins,} zwei)} selt {\footnotesize (und)} der 
+	{\footnotesize (drei)} Schnee {\footnotesize (\textbf{eins,} zwei, drei)}
+	\dots
+}
+
+Beachte übrigens den Haltebogen der die beiden letzten Takte verbindet. So wird
+eine Note geschrieben die \emph{sechs} Schläge dauert. Das wäre in einen Dreivierteltakt sonst nicht möglich!
+
+\section{Ein unbekanntes Lied}
+Wenn man ein neues Lied einüben möchte, ist es leichter sich erst auf dem Rhythmus zu 
+konzentrieren. Dabei ignoriert man erstmal die Tonhöhen und spricht zunächst erst 
+den Text. In den Takten wo man den Rhythmus nicht kennt, spricht man die Grundschläge
+so wie es gerade beschrieben wurde (z.B. \textbf{eins} -- zwei - und - drei -- vier).
+Erst wenn man den Text mit dem richtigen Rhythmus sprechen kann, \glqq sucht\grqq\ man 
+die richtige Tonhöhen dazu.
+
+\chapter{Begleitung}
+\section{Begleitung mit einem Bordun}
+Ein Bordun\footnote{von \textbf{Bourdon} (frz.) = Hummel, eine Anspielung auf das Summen einer Hummel}
+ist ein andauernder, gleichbleibender, summender und meist tiefer Ton, \comment{Bordun = 
+ein tiefes Summen} der als Begleitung einer Melodie gespielt oder gesungen wird.\footnote{vgl. Willemze Theo: 
+Algemene Muziekleer §1051: Bourdon kommt von burden (engl.) = Schwere; 
+Borduntöne sind schwere/tiefe Töne}
+Dieser Ton lässt man während des ganzen Lieds klingen. Wenn der Ton auf den zur Verfügung stehenden Instrumenten
+nicht ausgehalten werden kann (z.B. auf Stabspielen) wiederholt man den so oft wie nötig, mindestens 
+einmal im jeden Takt.
+
+Lieder die nur wenige Begleitakkorde benötigen, eignen sich für eine Begleitung mit einem Bordun. 
+Normalerweise nimmt man als Begleitton den Grundton der Tonart. Wenn das zu begleitende Lied z.B. 
+in F-Dur steht, nimmt man ein (tiefes) F. Oft findet man in den Noten der Lieder die Begleitakkorde.
+In dem Fall sieht man, ob es viele Akkordwechsel gibt, und welcher Akkord am meisten genutzt wird. 
+So kann man den Grundton -- den Bordunton -- leicht ermitteln.
+
+Oft wird der Bordun mit einer Oberquinte\footnote{Quinte von quintus (lat.) = der Fünfte.
+Die Oberquinte
+liegt fünf Stammtöne -- oder sieben Halbtonschritte -- über den Grundton.} \comment{Oberquinte} bereichert.
+Beide Töne (Bordun und Oberquinte) werden zusammen
+-- eventuell auf verschiedenen Instrumenten -- gespielt. 
+
+\section{Begleitung mit einem Ostinato}
+\glqq Ostinato\footnote{Laut Duden sowohl \emph{der} Ostinato als auch \emph{das} Ostinato}\grqq\ kommt aus dem Italienischen und heißt \emph{hartnäckig}.\comment{ostinato =\\hardnäckig}
+In der Musik wird damit ein immer wiederkehrende Tonfolge angedeutet. Diese Tonfolge kann aus sehr vielen
+Tönen bestehen, für die Begleitung von Kinderlieder beschränkt man sich in der Regel auf kürze Tonfolgen
+von bis zu vier Tönen.
+
+Lieder die Sich für einen Bordun eignen, lassen sich auch mit einem Ostinato begleiten. Ferner kann man
+Lieder die einem Regelmäßigen Akkordwechsel aufweisen mit einem Ostinato so begleiten, das die Tonfolge
+genau dem Akkordwechsel folgt. Somit sind die Möglichkeiten beim Ostinato etwas größer als beim Bordun.
+
+\section{Begleitung mit Grundtönen}
+Bei den Liedern, wo die Akkorde schon vorgegeben sind, kann man die Grundtöne der Akkorde von (tiefen) 
+Instrumenten spielen lassen. Die Grundtöne lassen sich leicht ermitteln. Der Akkordbuchstabe gibt den 
+Grundton an. So ist z.B. bei dem Akkord $Am$ (a-Moll) der Grundton: $A$.
+
+Ob man diese Begleitungsart in einem Kindergarten von Kindern bewältigen lassen kann, ist fraglich. 
+Erwachsene Mitspieler (KollegInnen) könnten das ohne weiteres. Falls man nicht über einen Bass-Xylofon 
+oder Ähnliches verfügt,
+eignet sich eine Gitarre oder Keyboard eben so gut. Vor allem wenn die Akkorde auf der
+Gitarre schwierig zu spielen sind 
+(z.B. F) ist eine Begleitung mit (nur) Basstönen/Grundtönen eine gute Alternative.
+
+\chapter{Musizieren mit Kindern}
+\section{Warum musizieren?}
+Musik kann in unseren Alltag unterschiedliche Funktionen haben. Das Erleben von Musik kann uns 
+Menschen positiv beeinflussen. Es scheint deshalb wünschenswert, Kinder möglichst früh mit 
+Musik in Kontakt zu bringen. Dabei muss einer der Ziele sein, dem Kind zu befähigen, die positive
+Einflüsse für sich zu nutzen. Dazu muss die Musik sowohl passiv als auch aktiv
+erlebt werden.
+
+In der Soziologie unterscheidet man verschiedene Funktionen, die von Musik ausgeübt werden 
+können.\footnote{vgl. Rösing H.: Kulturpsychologische Aspekte; aus: Bruhn, Oerter, Rösing (Hg.) Musikpsychologie --
+ein Handbuch, S. 77}
+Einige für die Prüfung relevante Funktionen sind:
+\begin{itemize}
+	\item Festlichkeitsfunktionen: Musik als Rahmen für Besondere Anlässe oder Feierlichkeiten
+	\item Funktionen der Bewegungsaktivierung: Tanzmusik, Marsch- oder Parademusik
+	\item gemeinschaftsbindende, gruppenstabilisierende Funktionen: Musik als Identifikationsmerkmal
+	\item erzieherische Funktionen: Musik als Mittel zur Bildung
+	\item Kontaktfunktionen: als nonverbales Medium zu Kontaktaufnahme 
+\end{itemize}
+Dieser Vielfalt an Funktionen macht einerseits klar, dass auf Musik nicht verzichtet werden kann, andererseits
+werden einige Anlässe genannt, die sich zum Einsatz von Musik eignen. So kann man z.B. Bewegungsangebote
+mit Musik untermalen. Gemeinsames singen am Morgen kann die Gemeinschaft stärken. Dass Musik bei den
+verschiedenen Festen -- religiöse oder weltliche Anlässe -- eine wichtige Rolle spielt, muss man
+hier nicht weiter betonen. Die erzieherische Funktionen können sein:
+\begin{itemize}
+	\item das Schulen der auditiven Wahrnehmung
+	\item das Verständnis der Sprache fördern 
+	\item die Förderung der Sprachmotorik
+	\item die Entwicklung der Grobmotorik unterstützen
+\end{itemize}
+
+
+\section{Methodische Aspekte}
+Bei der Planung eines Musikalischen Angebots muss man sich immer vor Augen halten,
+dass Kinder grundsätzlich spielen möchten.\comment{Spielpartner}
+Deshalb muss der Erzieher oder Kinderpfleger sich in erste Linie als 
+Spielpartner anbieten.\footnote{vgl. den Beitrag \glqq Von der 
+	Skepsis zur Überzeugung\grqq\ von Küspert I. in Ribke u. Dartsch (Hg.) Facetten Elementare
+	Musikpädagogik, S. 52ff} Jedes Spiel braucht ein Thema\comment{Spiel -- Thema}
+das für diese 
+Altersstufe interessant ist. Das Singen, Trommeln oder Tanzen kann so auf
+natürliche Weise mit einbezogen werden, ohne das bei den Kindern das Gefühl
+entsteht das sie etwas tun (im Sinne von arbeiten) \emph{müssen.}
+
+
+Kinder brauchen Wiederholung.\comment{Wiederholung} Man kann ein Lied nicht oft
+genug singen. 
+Bei der Planung muss man das berücksichtigen, und ausreichend Zeit dafür nehmen.
+Meiner Meinung nach kann man durchaus weniger machen (z.B. ein kürzeres Lied, 
+nur wenige Tanzschritte), und diese Einheit dafür öfter auftauchen lassen.
+
+Erwachsene haben in der Regel eine ausgeprägte Meinung darüber, wie
+Musik zu sein hat. Bei Kindern ist das noch nicht der Fall, und sie\comment{Experimente} 
+werden sich deshalb eher auf Experimente einlassen. Das Bietet gute 
+Voraussetzungen für das Improvisieren, \comment{Improvisation} das spontane
+-- ohne Vorgaben wie z.B. eine Melodie -- Spielen oder Singen.
+Damit eine Improvisation gelingen kann müssen einige Bedingungen geschaffen 
+werden:\footnote{nach Greiner J., \glqq Holzmusik -- Ein Beispiel aus der Elementaren
+	Musikpädagogik mit Vorschulkindern\grqq; Beitrag in Ribke u. Dartsch (Hg.) Facetten
+	Elementare Musikpädagogik, S. 57ff}
+
+\myquote{-Vertrautheit,}
+
+\myquote{-etwas das die Fantasie anregt,}
+
+\myquote{-Verabredungen um das Geschehen zu strukturieren,}
+
+\myquote{-ausreichende akustische Sensibilisierung,}
+
+\myquote{-Handhabung der Instrumente, und}
+
+\myquote{-es gibt kein \glqq Richtig\grqq\ oder \glqq Falsch\grqq\ }
+
+Um diese Bedingungen zu schaffen braucht man natürlich einige Stunden zur Vorbereitung.
+Die Instrumente sollten vorher ausprobiert sein (Handhabung), die Spielregeln
+(Verabredungen: wer darf wann spielen) kann man in früheren Stunden einführen
+und üben, und damit Kinder aufeinander hören lernen, braucht es Zeit. Nach
+ausreichende Vorbereitung allerdings, kann eine gelungene Improvisation zu 
+einem intensiven Erfolgserlebnis führen.
+
+Folgende Instrumente\comment{Instrumente} sind für Kinder im Kindergartenalter 
+gut geeignet:\footnote{
+	Fischer R: Singen Bewegen Sprechen -- Musik machen in Kita und Krippe, S 37}
+Klanghölzer, Rasseln, Handtrommeln, Triangel, Becken (verschiedene Größen),
+Guiros, Woodblocks, Schellenreifen, Altxylofon (zum Vorspielen oder Mitspielen) oder
+Glockenspiel (helle Töne). Suchen Sie nach
+Bildern dieser Instrumente, damit Sie diese benennen können.
+
+\chapter{Die Prüfung}
+\section{Vorbereitung}
+Wählen Sie drei Lieder aus. Diese Lieder müssen für Kinder im 
+Kindergarten- oder Grundschulalter angemessen sein. Überlegen Sie, was sie mit diesen Liedern
+mit einer Gruppe von Kindern im dem Alter machen können. Überlegen Sie
+sich mögliche Rahmenhandlungen oder Geschichten. Wenn es angemessen 
+erscheint, überlegen Sie sich Bewegungen, Gesten oder Tanzschritte.
+
+Bedenken Sie, was Sie mit diesen Liedern Fördern könnten (z.B. Sprachverständnis, 
+Grobmotorik, Sprachmotorik\ldots). Überlegen Sie, wie Sie diese Förderung noch 
+verstärken könnten, z.B. indem Sie bei Sprachmotorik mehr auf die Sprache eingehen,
+oder extra Sprachübungen durchführen. Gibt es eventuell Angebote, die Sie vorher
+durchführen müssen? Denken Sie dabei an einer Geschichte die man vielleicht vorher
+erzählen möchten. Möchten Sie Tanzschritte im Vorfeld einüben?
+
+Üben Sie ihre Lieder. Sie müssen diese singen und spielen können. Es ist gleich, welches
+Instrument Sie verwenden möchten. Achten Sie bitte auf eine für Kinder geeignete Tonhöhe.
+Überlegen Sie eine passende Begleitung. Besonders gut wäre es, wenn diese Begleitung auch von
+Kindern gespielt werden könnte.
+
+\section{Die mündliche Prüfung}
+Während der Prüfung stellen Sie den Prüfern ihre Lieder vor. Daraufhin wählen die Prüfer
+ein Lied aus. Anschließend stellen Sie Ihre Überlegungen zu dem Lied vor. Rechnen Sie 
+während Ihre Vorstellung mit ergänzende Fragen der Prüfer. Nach Abschluss folgen noch einige 
+Fragen allgemeiner Natur.
+
+Nach etwa 30 Minuten werden Sie gebeten, den Raum für kurze Zeit zu verlassen. Die Prüfer
+werden sich beraten und Sie nach einigen Minuten nochmal hereinbitten, damit Ihnen das 
+Ergebnis mitgeteilt werden kann. Jetzt können Sie sich, nach bestandener Prüfung, entspannen.
+Wir wünschen Ihnen viel Erfolg.
+
+%\bibliographystyle{plain}
+%\bibliography{main}
+
+\chapter*{Literaturverzeichnis}
+\begin{itemize}
+\item FakOSozPäd. Anlage 3, 10.2.1 Satz 2 lautet:
+\glqq Erzieherpraktikanten, die unmittelbar in das zweite Jahr des Sozialpädagogischen Seminars eintreten und keine abgeschlossene Berufsausbildung in einem staatlich anerkannten Ausbildungsberuf aufweisen, \emph{haben sich einer Ab\-schluss\-prüfung} als andere Bewerber zum Erwerb des Berufsabschlusses als Staatlich ge\-prüf\-ter Kinderpfleger/ Staatlich geprüfte Kinderpflegerin an der Fach\-aka\-demie für Sozialpädagogik \emph{zu unter\-zie\-hen.\grqq}
+
+% § 37 Abs. 1 Satz 2, Nrn. 10.1.1 bis 10.1.4 sowie die §§ 44, 46 bis 48, 50 Abs. 2 Sätze 2 bis 5,§§ 51 und 51a Abs. 1 BFSOHwKiSo gelten entsprechend.
+\item Ernst, Manfred: Praxis Singen mit Kindern, Lieder vermitteln, begleiten, dirigieren. Rum/Innsbruck, Helbling 2008
+
+\item Willemze Theo: Algemene Muziekleer, neunte verbesserte Auflage 1984, Uitgeverij Het Spectrum, Utrecht/Antwerpen (Übersetzungen aus dem Holländischen stammen vom Verfasser dieses Skriptes)
+
+\item Bruhn H, Oerter R. und Rösig H. (Hg.): Musikpsychologie -- ein Handbuch, Rowolt Taschenbuch 
+Verlag, Reinbeck bei Hamburg, Mai 1994
+
+\item Fischer R: Singen Bewegen Sprechen -- Musik machen in Kita und Krippe, Schott Verlag
+\end{itemize}
+\newpage
+\ 
 \end{document}

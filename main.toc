@@ -1,21 +1,23 @@
 \select@language {ngerman}
-\contentsline {chapter}{\numberline {1}Einzelteile}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Der Schlüssel}{3}{section.1.1}
-\contentsline {section}{\numberline {1.2}Die Notenwerte}{4}{section.1.2}
-\contentsline {section}{\numberline {1.3}Der Notenkopf}{4}{section.1.3}
-\contentsline {section}{\numberline {1.4}Der Notenhals}{4}{section.1.4}
-\contentsline {section}{\numberline {1.5}Hilfslinien}{5}{section.1.5}
-\contentsline {section}{\numberline {1.6}Fähnchen und Balken}{5}{section.1.6}
-\contentsline {section}{\numberline {1.7}Die Pausen}{6}{section.1.7}
-\contentsline {subsection}{\numberline {1.7.1}Ganze und halbe Pause}{6}{subsection.1.7.1}
-\contentsline {subsection}{\numberline {1.7.2}Die viertel Pause}{7}{subsection.1.7.2}
-\contentsline {subsection}{\numberline {1.7.3}Achtel- und Sechzehntelpausen}{7}{subsection.1.7.3}
-\contentsline {section}{\numberline {1.8}Die Versetzungszeichen}{8}{section.1.8}
-\contentsline {chapter}{\numberline {2}Musiknotation}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Ein ganzes Lied}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Der Zeilenanfang}{9}{section.2.2}
-\contentsline {section}{\numberline {2.3}Die Zeile}{9}{section.2.3}
-\contentsline {section}{\numberline {2.4}der Takt}{10}{section.2.4}
-\contentsline {section}{\numberline {2.5}Hälse, Balken}{10}{section.2.5}
-\contentsline {section}{\numberline {2.6}Der Schluss}{11}{section.2.6}
-\contentsline {section}{\numberline {2.7}Ein Beispiel}{12}{section.2.7}
+\contentsline {chapter}{\numberline {1}Einleitung}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Warum dieses Skript}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Zur Prüfung}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Tonsystem}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Die Stammtöne}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Versetzungszeichen}{5}{section.2.2}
+\contentsline {chapter}{\numberline {3}Rhythmus}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Notenwerte}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Metrum und Taktart}{8}{section.3.2}
+\contentsline {section}{\numberline {3.3}Rhythmus}{9}{section.3.3}
+\contentsline {section}{\numberline {3.4}Haltebögen und Punktierte Noten}{10}{section.3.4}
+\contentsline {section}{\numberline {3.5}Ein unbekanntes Lied}{12}{section.3.5}
+\contentsline {chapter}{\numberline {4}Begleitung}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Begleitung mit einem Bordun}{13}{section.4.1}
+\contentsline {section}{\numberline {4.2}Begleitung mit einem Ostinato}{13}{section.4.2}
+\contentsline {section}{\numberline {4.3}Begleitung mit Grundtönen}{14}{section.4.3}
+\contentsline {chapter}{\numberline {5}Musizieren mit Kindern}{15}{chapter.5}
+\contentsline {section}{\numberline {5.1}Warum musizieren?}{15}{section.5.1}
+\contentsline {section}{\numberline {5.2}Methodische Aspekte}{16}{section.5.2}
+\contentsline {chapter}{\numberline {6}Die Prüfung}{18}{chapter.6}
+\contentsline {section}{\numberline {6.1}Vorbereitung}{18}{section.6.1}
+\contentsline {section}{\numberline {6.2}Die mündliche Prüfung}{18}{section.6.2}
