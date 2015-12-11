@@ -1,0 +1,343 @@
+\documentclass[10pt,a4paper,twoside]{report}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage{fancyhdr}
+\usepackage{leading}
+\usepackage{fontspec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Garamond}
+\setsansfont{Agfa Rotis Semisans}
+\setmonofont{Consolas}
+
+\textwidth 12cm
+\marginparwidth 3cm
+\marginparsep 8mm
+\parindent 0cm
+\parskip 2pt
+
+
+%pagestyle
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{} }
+\renewcommand{\sectionmark}[1]{\markright{#1}{} }
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO,RE]{\nouppercase \leftmark}
+\fancyheadoffset[LE,RO]{38mm}
+
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyfoot[CE, CO]{\thepage}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+
+
+\author{Ivanildo Kowsoleea\\Fachakademie für Sozialpädagogik Mühldorf}
+\title{{\huge Musikalische Kalligrafie}\\
+{\small oder: wie schreibe ich Noten richtig }}
+\date{im Januar 2014}
+
+\newcommand{\comment}[1]{\marginpar{\begin{flushleft}
+            \textsf{#1}
+        \end{flushleft}}}
+
+\newcommand{\image}[4]{
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=#4cm]{#1}
+		\caption{#2}
+		\label{#3}
+	\end{figure}
+}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\leading{12pt}
+\chapter{Einzelteile}
+
+\section{Der Schlüssel}
+
+Zuerst befassen wir uns mit dem Notenschlüssel. Es gibt drei Arten,
+die G-Schlüssel, die F-Schlüssel und die C-Schlüssel
+(siehe \autoref{notenschl}).
+\image{img/schluessel.png}{Der G-Schlüssel, der F-Schlüssel und der C-Schlüssel}{notenschl}{8}
+
+Der G-Schlüssel zeigt an, wo auf den Notensystem sich die Note $g^1$
+befindet, genau da, wo die schleife in der Mitte anfängt. 
+In Prinzip kann der G-Schlüssel auf jede Linie anfangen, heutzutage
+jedoch fängt er auf der zweiten Linie von unten an.
+In diesem Fall heißt der Schlüssel \emph{Violinschlüssel.}\comment{Violinschlüssel}
+
+Der F-Schlüssel markiert die Note $f$ und der C-Schlüssel die Note $c^1$. Der F-Schlüssel auf der vierte Linie von unten nennt man auch \emph{Bassschlüssel.} Der C-Schlüssel auf der dritte Linie ist der \emph{Altschlüssel.}
+
+Für uns ist nur der Violinschlüssel (siehe \autoref{violinschl}) von Interesse.
+\image{img/violinschl.png}{Der Violinschlüssel}{violinschl}{3}
+Der Violinschlüssel fangt auf der zweiten Linie von unten an, hoch bis zur dritten 
+Linie, zurück zur untersten Linie, linksherum nach oben, außerhalb des Notensystems nach 
+links, und mittig nach unten.
+
+\section{Die Notenwerte}
+Der Wert einer Note, der Notenwert, gibt an, wie lange eine Note dauert.
+\comment{Notenwert = Dauer}
+Die Notenwerte die hier behandelt werden sind: die ganze Note, die halbe Note,
+die Viertelnote, die Achtelnote und die Sechzehntelnote. In \autoref{nwerte}
+sind diese Notenwerte einmal dargestellt.
+\image{img/nwerte.png}{von links nach rechts: die ganze Note, die halbe Note,
+die Viertelnote, die Achtelnote und die Sechzehntelnote}{nwerte}{8}
+
+
+\section{Der Notenkopf}
+\label{notenkopf}
+Der Notenkopf darf nicht zu groß oder zu klein sein. Er passt genau zwischen 
+zwei Notenlinien. Eine Note wird nicht als Kreis gemalt. Der Kopf ist ein Oval 
+(gestreckter Kreis) der schräg von links unten nach rechts oben verläuft (siehe 
+\autoref{nkopf}).
+
+\image{img/nkopfa.png}{der Notenkopf}{nkopf}{7}
+
+Ein Notenkopf kann offen oder geschlossen sein. 
+Ganze und halbe Noten haben einen offenen Kopf, alle andere Notenwerte werden
+mit einem geschlossenen (schwarzen) Notenkopf gemalt (siehe \autoref{nkopf2}).
+
+\image{img/nkopf2.png}{ein geschlossener und ein offener Notenkopf}{nkopf2}{4}
+
+
+\section{Der Notenhals}
+Der Notenhals hat in etwa die Länge von drei 
+\comment{Hals $ \rightarrow $\\ drei Zwischenräume}Zwischenräumen.%
+\footnote{Wenn die betreffende Note sich unter einem Balken befindet, kann es sein, dass der Hals verlängert oder verkürzt werden muss. Siehe dazu auch \autoref{balkensection}.}
+Er kann sowohl nach 
+oben als auch nach unten gezeichnet werden.
+Notenhälse die nach oben zeigen, malt man rechts von der Note. Ein Hals der nach 
+unten zeigt, kommt links von der Note (siehe \autoref{hals}).
+\image{img/hals.png}{der Notenhals}{hals}{4}
+
+Alle Noten bis auf die ganze Note haben einen Hals. In der 
+Regel werden Noten, die über der dritte Linie stehen, mit dem 
+Hals nach unten gezeichnet, die übrige Noten zeichnet
+man mit dem Hals nach oben.
+
+Bewegen Sie beim Malen der Notenhälse den Stift immer von oben 
+nach unten.
+
+\section{Hilfslinien}
+Wenn Noten so tief (oder so hoch) sind, dass sie nicht mehr auf das
+Notensystem (die fünf Linien) gezeichnet werden können, braucht man Hilfslinien
+um die genaue Lage der Noten deutlich zu machen.
+
+Eine Hilfslinie ist etwa so lange wie zwei Zwischenräume. Der Abstand
+zwischen einzelnen Hilfslinien und zwischen Hilfslinie und Notensystem
+beträgt genau einen Zwischenraum. Sie dazu \autoref{hlinie}.
+
+\image{img/hlinie-1.png}{Eine halbe Note mit zwei Hilfslinien}{hlinie}{5}
+
+\section{Fähnchen und Balken}
+\label{balkensection}
+Achtelnoten und Sechzehntelnoten werden mit Fähnchen dargestellt. 
+Die Achtelnote bekommt 
+ein Fähnchen, die Sechszehntelnote zwei. Siehe dazu \autoref{faenchen}.
+Beachte, dass Fähnchen immer nach rechts gemalt werden, 
+unabhängig davon, ob der Hals 
+nach oben oder nach unten gezeichnet wurde.
+Beachte, dass die Fähnchen etwa gleich lang sind wie der Notenhals.
+
+\image{img/faehnchen.png}{Achtel- und Sechszehntelnote mit
+    Fähnchen}{faenchen}{4}%
+
+Die Fähnchen von mehreren Achtel- oder Sechzehntelnoten hintereinander können 
+zusammengefügt werden zu einem Balken. Dadurch wird die Notation übersichtlicher.
+Achtelnoten bekommen nur einen Balken, die Sechzehntelnoten einen Doppelbalken. 
+Beide Sind dargestellt in \autoref{balken}.
+
+\image{img/balken.png}{mehrere Achtel- und Sechzehntelnoten 
+    mit Balken}{balken}{7}
+
+Handelt es sich um Noten mit unterschiedlichen Tonhöhen, 
+muss man gegebenenfalls die 
+Länge der Hälse anpassen.
+Die dritte Note in \autoref{balken2} bekommt einen längeren Hals, weil sonst die
+Hälse der ersten oder der vierten Note zu kurz wären.
+\image{img/balken2.png}{Noten unterschiedlicher Tonhöhe 
+    mit Balken}{balken2}{3.5}
+
+\section{Die Pausen}
+Zu jedem Notenwert gibt es einen dazugehörigen Pausenwert. 
+Die Pausen sind in \autoref{pausen} 
+dargestellt.
+
+\image{img/pausen.png}{die ganze Pause, halbe Pause, viertel Pause, 
+    achtel Pause und die sechzehntel Pause}{pausen}{6}
+
+\subsection{Ganze und halbe Pause}
+Die ganze und die halbe Pause sind Rechtecken, die etwa 
+zweidrittel eines Zwischenräumens dick
+und etwas weniger als zwei Zwischenräume breit sind. 
+Die ganze Pause hängt unterhalb der 
+vierten Linie (von unten).\comment{ganze Pause hängt}
+Die halbe Pause liegt auf der dritten Linie.\comment{halbe Pause liegt}
+Siehe dazu \autoref{pause2}.
+\image{img/pausen2c.png}{ungefähre Abmessungen der ganzen und 
+    halben Pause}{pause2}{8}
+
+\subsection{Die viertel Pause}
+Die viertel Pause fängt oben zwischen der vierten und fünften Linie an, geht schräg nach rechts unten,
+danach weiter lach links innerhalb vom dritten Zwischenraum (von unten), anschließend nach rechts,
+nach unten
+zum zweiten Zwischenraum, um da mit einem Bogen nach links abzuschließen. 
+Siehe dazu \autoref{pause3}. 
+\image{img/pausen3c.png}{die viertel Pause}{pause3}{5.5}
+
+\subsection{Achtel- und Sechzehntelpausen}
+In \autoref{pause4} werden die Achtel- und die Sechzehntelpause gezeigt.
+\image{img/pausen4.png}{die Achtel- und die Sechzehntelpause}
+{pause4}{5.5}
+
+Man fängt im dritten Zwischenraum an, schreibt einen kleinen Bogen nach rechts,
+anschließend eine gerade Linie nach unten links. Diese Linie sollte fast so lange sein
+wie zwei Zwischenräume -- bei der Sechzehntelnote wie drei Zwischenräume. Siehe dazu
+\autoref{pause5}
+\image{img/pausen5c.png}{die Achtelpause mit Zeichenanleitung}{pause5}{5.5}
+
+
+\section{Die Versetzungszeichen}
+Die Versetzungszeichen (auch Vorzeichen) sind: das Kreuz, 
+\comment{Kreuz $\sharp$\\Be $\flat$\\Auflösungszeichen $\natural$}
+das Be und das Auflösungszeichen. Sie sind in 
+\autoref{vzeichen} abgebildet. Beachte, dass beim Kreuz, die beiden Querstriche
+sich etwa einen Zwischenraum auseinander befinden. 
+Ebenso ist der "`Bauch"'
+des Be etwa ein Zwischenraum groß, genauso wie die "`Raute"' beim 
+Auflösungszeichen.
+\image{img/vzeichen4.png}{das Kreuz, das Auflösungszeichen und das Be }
+{vzeichen}{6}
+
+Ein Versetzungszeichen befindet sich immer \emph{links} von der Note und auf der gleichen Höhe wie der Notenkopf. Siehe dazu \autoref{vzeichen2}
+\image{img/vzeichen2.png}{Position der Versetzungszeichen}{vzeichen2}{5}
+
+\chapter{Musiknotation}
+
+\section{Ein ganzes Lied}
+Wenn man ein Lied bzw. Musikstück in Notenschrift aufzeichnen soll, 
+empfiehlt es sich eine bestimmte Reihenfolge einzuhalten. Man schreibt
+Zeile für Zeile. Wie man die Zeilen im einzelnen erstellt wird in den
+nächsten Abschnitten erläutert.
+
+
+\section{Der Zeilenanfang}
+Am Anfang der Zeile, ganz links kommt der Notenschlüssel. Dann schreibt man,
+falls benötigt, die Vorzeichen (oder Versetzungszeichen) 
+die die Tonart bestimmen. 
+Danach erst kommt die Bezeichnung 
+der Taktart (z.B. $ \begin{smallmatrix}3 \\ 4\end{smallmatrix} $ 
+für einen 3-Vierteltakt). Siehe dazu 
+\autoref{anfang}.
+
+\image{img/anfang.png}{Anfang der ersten Zeile}{anfang}{4}
+
+Notenschlüssel und Vorzeichen (falls vorhanden) werden auf jeder Zeile
+wiederholt.\comment{Reiehnfolge:\\Notenschlüssel$ \rightarrow $\\
+Vorzeichen$ \rightarrow $\\Taktart}
+Die Taktart steht \emph{nur auf der ersten Zeile}. Falls ein 
+Wechsel der Taktart stattfindet, schreibt man die neue Taktart
+in den Takt wo der Wechsel statt 
+findet -- nicht vorne beim Zeilenanfang. 
+
+\section{Die Zeile}
+Auf einer Zeile stehen mehrere Takte. Zwischen den Takten und am Ende der Zeile
+malt man Orientierungsstriche -- die sogenannten Taktstriche.
+\comment{Taktstriche dienen der Orientierung.}
+Diese sind genau 4 Zwischenräume lang und gehen von der oberste bis 
+zur unterste Linie (siehe \autoref{zeile}).
+
+\image{img/zeile.png}{Erste Zeile mit Taktstrichen,
+    noch ohne Noten}{zeile}{12}
+
+Beim Schreiben muss man einschätzen,
+wie viele Takte auf der Zeile passen. 
+Drei bis vier Takte pro Zeile entspricht dem 
+Normalfall, falls es jedoch viele halbe und ganze Noten gibt, 
+kann es durchaus sein,
+dass mehr als vier takte in der Zeile platz haben. 
+Gibt es dagegen viele Sechzehntelnoten,
+passen vielleicht nicht mehr als 2 Takte in der Zeile.
+
+Nach dem Abschätzen malt man die Taktstriche. 
+Es ist nicht nötig, 
+alle Takte gleich breit 
+zu machen. Takte mit weniger Noten darf man schmäler zeichnen. 
+
+\section{der Takt}
+Jetzt verteilt man die Noten und Pausen auf die einzelne Takte. 
+In den Takt malt man erst 
+nur die Notenköpfe und eventuelle Pausen hin. Dabei malt man
+kleinere Notenwerte (Achtel, 
+Sechzehntel) etwas enger 
+zusammen als größere. Beachte natürlich, dass 
+manche Notenköpfe offen, andere jedoch 
+geschlossen sein müssen. Siehe dazu auch 
+\autoref{notenkopf} auf Seite \pageref{notenkopf}.
+
+\image{img/takt1-1.png}{1. Schritt: Noten ohne Hals}{takt1}{8}
+
+
+
+\section{Hälse, Balken}
+Wenn in einem Takt alle Notenköpfe eingeteilt wurden, 
+entscheidet man sich bei den Achtel- 
+und Sechzehntelnoten, ob man Balken oder Fähnchen 
+zeichnen möchte (siehe nochmal 
+\autoref{balkensection} auf Seite \pageref{balkensection}).
+
+Die Notenhälse die nicht mit Balken verbunden werden sollen, 
+kann man jetzt zeichnen (siehe \autoref{takt2}).
+
+\image{img/takt2-1.png}{2. Schritt: einzelne Notenhälse einzeichnen}
+{takt2}{8}
+
+Falls es eine Notengruppe gibt, die unter einen (oder zwei)
+Balken kommen sollen, malt man erst den Notenhals der linken Note
+der Gruppe, danach den Notenhals der rechten Note der Gruppe. 
+Ob die Hälse nach oben oder nach unten zeigen, 
+wird von der Mehrheit der Noten bestimmt (siehe \autoref{takt3}).
+ 
+\image{img/takt3-1.png}{3. Schritt: Achtelgruppe links und rechts}{takt3}{8}
+
+Nachdem man den Balken gezogen hat (\autoref{takt4}), 
+\image{img/takt4-1.png}{4. Schritt: Der Balken}{takt4}{8}
+
+kann man die übrige Notenhälse dazu malen (\autoref{takt5}).
+\image{img/takt5-1.png}{4. Schritt: Notenhälse Vervollständigen}{takt5}{8}
+
+Diese Vorgehensweise (erst Köpfe, Pausen, danach Hälse und Balken)
+\comment{Köpfe, Hälse, Balken (Hälse)} 
+wiederholt man für die übrigen Takte der Zeile.
+
+\section{Der Schluss}
+Das Ende des Liedes bzw. des Musikstückes muss angegeben werden --
+aus der Notation soll hervorgehen, dass das Lied zu Ende ist.
+Dazu malt man als letzter Taktstrich einen Schlussstrich. 
+\comment{Schlussstrich}
+Dieser besteht
+aus einem dünnen und einem dicken (etwa 3x so dick) Strich 
+(siehe \autoref{schluss1}).
+
+\image{img/schluss1-1.png}{Letzte Zeile mit Schlussstrich}{schluss1}{12}
+
+\section{Ein Beispiel}
+In \autoref{beispiel} sehen Sie eine Melodie, bestehend aus acht Takte,
+auf zwei Zeilen untergebracht. Beachten Sie, dass die Taktart (hier
+$\begin{smallmatrix}3\\4\end{smallmatrix}$) nur auf der erste Zeile steht.
+Nicht alle Takte sind gleich breit. Die erste Zeile wird auf der rechten Seite
+von einem Taktstrich abgeschlossen. Die letzte Zeile hat ganz rechts
+einen Schlussstrich.
+Versetzungszeichen -- hier zwei Kreuze -- stehen auf beiden Zeilen.
+
+
+\image{img/beispiel-1.png}{Ein vollständiges Beispiel}{beispiel}{12}
+\end{document}
