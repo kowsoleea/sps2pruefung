@@ -28,7 +28,6 @@ structure = {
 %
 
 upper = \relative c'{
-    \stemUp
     f g a b c2 c  d4 d d d c1
 }
 
